@@ -23,4 +23,38 @@ public class Ball {
         graphics.fillOval(x, y, size, size);
     }
 
+    public void moveBall() {
+
+        x += cx;
+        y += cy;
+    }
+
+    public void bounceOffEdge(int top, int bottom) {
+
+        if (y > bottom - size) {
+            reverseY();
+        }
+
+        if (y < top) {
+            reverseY();
+        }
+
+        if (x < 0) {
+            reverseX();
+        }
+
+        if (x > 640 - size) {
+            reverseX();
+        }
+
+    }
+
+    public void reverseY() {
+        cy *= -1;
+    }
+
+    private void reverseX() {
+        cx *= -1;
+    }
+
 }

@@ -23,10 +23,12 @@ public class Main {
         Timer Timer = new Timer(33, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Test");
                 game.repaint();
+                game.gameLogic();
 
             }
         });
+
+        Timer.start();
     }
 }
