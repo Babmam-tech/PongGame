@@ -45,12 +45,16 @@ public class Ball {
         cy *= -1;
     }
 
-    private void reverseX() {
+    public void reverseX() {
         cx *= -1;
     }
 
     public int getY() {
         return y;
+    }
+
+    public int getX() {
+        return x;
     }
 
 }

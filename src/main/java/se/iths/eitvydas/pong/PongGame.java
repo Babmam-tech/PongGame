@@ -50,6 +50,14 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
         pcPaddle.moveTowards(gameBall.getY());
 
+        if (userPaddle.checkCollision(gameBall)) {
+            gameBall.reverseX();
+        }
+
+        if (pcPaddle.checkCollision(gameBall)) {
+            gameBall.reverseX();
+        }
+
     }
 
     @Override
