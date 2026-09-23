@@ -2,14 +2,18 @@ package se.iths.eitvydas.pong;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
-public class PongGame extends JPanel {
+public class PongGame extends JPanel implements MouseMotionListener {
     static final int WINDOW_HEIGHT = 480;
     static final int WINDOW_WIDTH = 640;
 
     private Ball gameBall;
 
     private Paddle userPaddle, pcPaddle;
+
+    private int userMouseY;
 
     public PongGame() {
 
@@ -18,6 +22,9 @@ public class PongGame extends JPanel {
         userPaddle = new Paddle(10, 200, 75, 3, Color.BLUE);
 
         pcPaddle = new Paddle(610, 200, 75, 3, Color.RED);
+
+        userMouseY = 0;
+        addMouseMotionListener(this);
 
     }
 
@@ -39,6 +46,19 @@ public class PongGame extends JPanel {
 
         gameBall.moveBall();
 
+        userPaddle.moveTowards(userMouseY);
+
     }
 
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
+        userMouseY = e.getY();
+
+    }
 }
