@@ -13,7 +13,7 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
     private Paddle userPaddle, pcPaddle;
 
-    private int userMouseY;
+    private int userMouseY, userScore, pcScore;
 
     public PongGame() {
 
@@ -37,6 +37,9 @@ public class PongGame extends JPanel implements MouseMotionListener {
         //Paint The Paddle
         userPaddle.paint(graphics);
         pcPaddle.paint(graphics);
+        //Score
+        graphics.setColor(Color.WHITE);
+        graphics.drawString("Score - Player [" + userScore + "]" + " " + "Score - Computer [" + pcScore + "]", 250, 20);
 
     }
 
@@ -56,6 +59,11 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
         if (pcPaddle.checkCollision(gameBall)) {
             gameBall.reverseX();
+        }
+        if (gameBall.getX() < 0) {
+            pcScore++;
+        } else if (gameBall.getX() > WINDOW_WIDTH) {
+            userScore++;
         }
 
     }

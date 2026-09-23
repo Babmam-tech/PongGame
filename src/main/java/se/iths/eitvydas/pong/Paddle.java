@@ -52,7 +52,7 @@ public class Paddle {
 
         int bottomY = y + height;
 
-        if (b.getX() > x && b.getX() < rightX) {
+        if (b.getX() > (x - b.getSize()) && b.getX() < rightX) {
             if (b.getY() > y && b.getY() < bottomY) ;
             return true;
         }

@@ -11,7 +11,7 @@ public class Main {
 
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        f.setSize(650, 495);
+        f.setSize(650, 515);
 
         PongGame game = new PongGame();
 
