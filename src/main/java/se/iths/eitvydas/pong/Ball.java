@@ -39,14 +39,6 @@ public class Ball {
             reverseY();
         }
 
-        if (x < 0) {
-            reverseX();
-        }
-
-        if (x > 640 - size) {
-            reverseX();
-        }
-
     }
 
     public void reverseY() {
@@ -57,4 +49,9 @@ public class Ball {
         cx *= -1;
     }
 
+    public int getY() {
+        return y;
+    }
+
 }
+

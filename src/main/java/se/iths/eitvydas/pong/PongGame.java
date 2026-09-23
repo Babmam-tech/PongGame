@@ -48,6 +48,8 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
         userPaddle.moveTowards(userMouseY);
 
+        pcPaddle.moveTowards(gameBall.getY());
+
     }
 
     @Override
