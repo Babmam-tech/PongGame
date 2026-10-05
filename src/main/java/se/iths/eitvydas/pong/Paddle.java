@@ -30,7 +30,7 @@ public class Paddle {
 
         int centerY = y + height / 2;
 
-        if (Math.abs(centerY - moveToY) > 5) {
+        if (Math.abs(centerY - moveToY) > 6) {
 
             if (centerY > moveToY) {
                 y -= speed;

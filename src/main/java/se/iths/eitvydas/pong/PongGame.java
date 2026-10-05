@@ -19,9 +19,9 @@ public class PongGame extends JPanel implements MouseMotionListener {
 
         gameBall = new Ball(320, 220, 3, 3, 3, Color.WHITE, 10);
 
-        userPaddle = new Paddle(10, 200, 75, 3, Color.BLUE);
+        userPaddle = new Paddle(10, 200, 75, 6, Color.BLUE);
 
-        pcPaddle = new Paddle(610, 200, 75, 3, Color.RED);
+        pcPaddle = new Paddle(610, 200, 75, 6, Color.RED);
 
         bounceCount = 0;
 
@@ -82,9 +82,9 @@ public class PongGame extends JPanel implements MouseMotionListener {
     public void reset() {
         gameBall = new Ball(320, 220, 3, 3, 3, Color.WHITE, 10);
 
-        userPaddle = new Paddle(10, 200, 75, 3, Color.BLUE);
+        userPaddle = new Paddle(10, 200, 75, 6, Color.BLUE);
 
-        pcPaddle = new Paddle(610, 200, 75, 3, Color.RED);
+        pcPaddle = new Paddle(610, 200, 75, 6, Color.RED);
 
         bounceCount = 0;
 
